@@ -31,7 +31,7 @@ function HomePage({isOpen, setIsOpen}) {
                     <h2>Join us as we embark on a journey of love, joy, and eternal happiness.</h2>
                     <p>From a chance meeting to a lifetime together, discover the chapters that brought us here. Our journey is a tapestry woven with laughter, tears, and countless moments that led us to this beautiful celebration of love.</p>
                     
-                    <button><Link to="/OurStory">Read Our Story</Link></button>
+                    <Link to="/OurStory"><button>Read Our Story</button></Link>
                 </div>
                 {/* <!-- <div className="our-story2" >
                     <img src="/assets/our-story-2.jpg" alt="">
@@ -44,7 +44,7 @@ function HomePage({isOpen, setIsOpen}) {
                     <h4>Tuscany</h4> 
                     <p>Step into the timeless beauty of Tuscany with our Giona wedding template. Set against the backdrop of rolling hills and lush vineyards, your celebration unfolds in the heart of a 17th-century villa, nestled amidst the enchanting landscape of Tuscany. </p>
                     <p>Surrounded by fragrant peach trees and bathed in the warm glow of the Italian sun, this picturesque setting exudes romance and charm at every turn. From intimate courtyard ceremonies to al fresco receptions under the stars, your love story comes to life in this idyllic Tuscan retreat. Let the rustic elegance and natural beauty of the villa set the stage for an unforgettable wedding day, where every moment is imbued with the magic of Italy.</p>
-                    <button><Link to="/Rsvp">Confirm Your Presence</Link></button>
+                    <Link to="/Rsvp"><button>Confirm Your Presence</button></Link>
                 </div>
                 <img src="/assets/confirm-1.jpg" alt=""/>
             </section>
@@ -70,7 +70,7 @@ function HomePage({isOpen, setIsOpen}) {
                         <p>Revel in a sumptuous feast under the stars, followed by an evening of dancing and merriment.</p>
                     </div>
                 </div>
-                <button><Link to="/Rsvp">RSVP</Link></button>
+                <Link to="/Rsvp"><button>RSVP</button></Link>
             </section>
 
 
