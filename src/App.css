@@ -631,167 +631,9 @@ footer{
   margin: 18px 0px;
 }
 
-/* REGISTRY */
 
 
 
-.cover-registry{
-  width: 100%;
-  padding: 80px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.cover-registry h1{
-  color: hsla( 0,0%,7.06% ,1);
-  font-size: 107px;
-  font-weight: 400;
-}
-
-.cover-registry p{
- width: 726px;
- display: flex;
- font-family: 'Lato';
- font-size: 18.29px;
- color: hsla( 113.68,13.67%,27.25% ,1);
- line-height: 2;
- display: block;
- margin-block-start: 1em;
- margin-block-end: 1em;
- margin-inline-start: 0px;
- margin-inline-end: 0px;
- font-weight: 400;
- justify-content:center;
- text-align: center;
-}
-
-
-
-
-.registry-container{
-  display: flex;
-  width: 100%;
-  height: 869px;
-  
-}
-
-
-
-.left ,
-.right , .center {
-  width: calc(100%/3);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-
-.registry-container div img{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  filter: brightness(0.8);
-}
-
-.left div ,
-.right div, .center div{
-  width: 290px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-
-.registry-container h2{
-  color: hsla( 45,50%,95.29% ,1);
-}
-
-.registry-container p{
-  display: flex;
-  font-family: 'Lato';
-  font-size: 18.29px;
-  color: hsla( 45,50%,95.29% ,1);
-  line-height: 2;
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: 400;
-}
-
-
-/* FAQS */
-
-
-.faq-container{
- background-color: hsla( 113.68,13.67%,27.25% ,1);
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- padding-bottom: 500px;
- background-image: url(/assets/countdown-image.png);
- background-repeat: no-repeat; 
- background-position: bottom;
- background-size: contain;
-}
-
-.faq-container ul li{
-  list-style: none;
-  padding: 30px 0px;
-  cursor: pointer;
-}
-
-.faq-container ul{
-  width: 50%;
-}
-.faq-titles{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  color: hsla( 45,50%,95.29% ,1);
-}
-
-.faq-titles div h4, .faq-titles div h1{
-  
-  font-weight: 400;
-}
-
-.accordion {
-  background-color: hsla( 113.68,13.67%,27.25% ,1);
-  color: hsla( 45,50%,95.29% ,1);
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-.panel {
-  display: none;
-  overflow: hidden;
-  font-family: 'Lato';
-  font-size: 18.29px;
-  color: hsla( 45,50%,95.29% ,1);
-  line-height: 2;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: 400;
-  margin: 30px 0px;
-}
 
 
 /* RSVP */
@@ -799,10 +641,10 @@ footer{
 
 .rsvp-cover{
   width: 100%;
-  height: 175vh;
+  height: 100%;
   position: absolute;
   top: 0;
-  
+  background-color: black;
 }
 
 .rsvp-cover img{
@@ -857,6 +699,8 @@ footer{
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 form{
@@ -865,8 +709,13 @@ form{
   width:60%;
   height: 965px;
   padding: 60.76px;
-  margin-bottom: 100px;
+  
   margin: auto;
+ 
+}
+
+.form-cover{
+padding-bottom: 100px;
 }
 
 fieldset{
@@ -1086,24 +935,9 @@ footer{
       position: relative;
       background-color: #EAE1D2D6;
       width:80%;
-      min-height: 965px;
       padding: 60.76px;
-      margin-bottom: 100px;
   }
-  .faq-container ul{
-      width: 70%;
-  }
-
-  .registry-container{
-      flex-direction: column;
-      width: 100%;
-      height: 1200px;
-  }
-  .left ,
-  .right , .center {
-      width: 100%;
-      height: calc(100% /3);
-  }
+  
 
   .travel-section1{
       flex-direction: column;
@@ -1195,7 +1029,6 @@ footer{
       width: 100%;
       position: absolute;
       top: 0;
-      height: 100%;
   }
 
   .cover-data h1 {
@@ -1203,7 +1036,7 @@ footer{
       text-align: center;
   }
 
-  .faq-titles h1,  .cover-registry h1 , .titles h1{
+  .cover-registry h1 , .titles h1{
       font-size: 50px;
       text-align: center;
   }
@@ -1214,8 +1047,9 @@ footer{
      font-size: 18.29px;
   }
 
-  form{
+  .rsvp-form{
       width:90%;
+      
   }
   
   .header .menu-pages, .header button{
@@ -1226,13 +1060,8 @@ footer{
   .header .menu{
       position: relative;
   }
-  .faq-container ul{
-      width: 90%;
-  }
-  .faq-container ul h3{
-      font-size: 25px;
-  }
-  .faq-titles h4 , .titles h4, .our-story-page h4{
+
+ .titles h4, .our-story-page h4{
       font-size: 40px;
       margin-top: 20px;
   }
@@ -1284,5 +1113,33 @@ footer{
   .our-story-section div{
       width: 100%;
   }
+
+}
+
+
+@media (max-width: 500px) {
+
+.rsvp-container{
+  height: 100%;
+}
+
+.rsvp-cover{
+  height: 100%;
+}
+  .rsvp-form{
+    height: 865px;
+  }
+
+form button{
+  padding: 15.8px 25.2px;
+  font-size: 15.58px ;
+  height: 50.5px;
+  margin-top: 5px;
+}
+
+}
+
+@media (max-width: 450px) {
+
 
 }

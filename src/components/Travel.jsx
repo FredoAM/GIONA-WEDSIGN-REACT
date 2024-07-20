@@ -1,13 +1,16 @@
 import { useState } from 'react'
 import '../App.css'
-
+import { Helmet } from 'react-helmet'
 import Header from './Header'
-
+import Footer from './Footer'
 
 function Travel({isOpen, setIsOpen}) {
  
   return (
     <>
+        <Helmet>
+                <title>Travel & Stay</title>
+        </Helmet>
         <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
         <main style={{ display: isOpen ? 'none' : 'block' }}>
             <div className="img-container">
@@ -64,6 +67,7 @@ function Travel({isOpen, setIsOpen}) {
                 <img src="assets/travel2.jpg" alt=""/>
             </section>
         </main>
+        <Footer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   )
 }

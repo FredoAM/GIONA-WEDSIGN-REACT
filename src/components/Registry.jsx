@@ -1,13 +1,16 @@
 import { useState } from 'react'
 
-import '../Registry.css'
+import { Helmet } from 'react-helmet'
 import HeaderRegistry from './Header-Registry.jsx'
-
-
+import Footer from './Footer'
+import '../Registry.css'
 function Registry({isOpen, setIsOpen}) {
  
   return (
     <>
+        <Helmet>
+                <title>Registry</title>
+        </Helmet>
         <HeaderRegistry isOpen={isOpen} setIsOpen={setIsOpen}/>
         <main style={{ display: isOpen ? 'none' : 'block' }}>
             <div className="cover-registry">
@@ -47,6 +50,7 @@ function Registry({isOpen, setIsOpen}) {
                 </div>
         </div>
         </main>
+        <Footer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   )
 }

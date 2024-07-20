@@ -18,7 +18,7 @@ function HeaderRegistry({isOpen, setIsOpen}) {
                         <li><Link to="/Registry" >Registry</Link></li>
                         <li><Link to="/Faqs" >FAQs</Link></li>
                     </ul>
-                    <button><Link to="/Rsvp">RSVP</Link></button>
+                    <Link to="/Rsvp"><button>RSVP</button></Link>
                 </div>
             </nav>
         </header>
@@ -34,7 +34,7 @@ function HeaderRegistry({isOpen, setIsOpen}) {
                         <li><Link to="/Registry" onClick={() => setIsOpen(!isOpen)}>Registry</Link></li>
                         <li><Link to="/Faqs" onClick={() => setIsOpen(!isOpen)}>FAQs</Link></li>
                     </ul>
-                    <button><Link to="/Rsvp" onClick={() => setIsOpen(!isOpen)}>RSVP</Link></button>
+                    <Link to="/Rsvp" onClick={() => setIsOpen(!isOpen)}><button>RSVP</button></Link>
                 </div>
             </nav>
         </header>

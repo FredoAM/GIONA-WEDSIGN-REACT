@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../Faqs.css';
 import HeaderFaqs from './Header-Faq.jsx';
+import Footer from './Footer'
+import { Helmet } from 'react-helmet';
 
 function Faqs({ isOpen, setIsOpen }) {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -38,6 +40,9 @@ function Faqs({ isOpen, setIsOpen }) {
 
   return (
     <>
+     <Helmet>
+            <title>FAQs</title>
+        </Helmet>
       <HeaderFaqs isOpen={isOpen} setIsOpen={setIsOpen} />
       <main className="faq-container" style={{ display: isOpen ? 'none' : 'block' }}>
         <div className="faq-titles">
@@ -53,7 +58,7 @@ function Faqs({ isOpen, setIsOpen }) {
             <li key={index}>
               <button className="accordion" onClick={() => toggleAccordion(index)}>
                 <h3>{faq.question}</h3>
-                <span>{activeIndex === index ? '-' : '+'}</span>
+                <span>{activeIndex === index ? <i className="fa-solid fa-minus"></i> : <i className="fa-solid fa-plus"></i>}</span>
               </button>
               <div className="panel" style={{ display: activeIndex === index ? 'block' : 'none' }}>
                 {faq.answer}
@@ -64,6 +69,7 @@ function Faqs({ isOpen, setIsOpen }) {
           ))}
         </ul>
       </main>
+      <Footer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   );
 }

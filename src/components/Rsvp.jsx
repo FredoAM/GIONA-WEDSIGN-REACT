@@ -1,16 +1,20 @@
 import { useState } from 'react'
 import '../App.css'
+import { Helmet } from 'react-helmet'
 
 import Header from './Header'
-
+import Footer from './Footer'
 
 function Rsvp({isOpen, setIsOpen}) {
  
   return (
     <>
-        <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+        <Helmet>
+            <title>RSVP</title>
+        </Helmet>
         <main className="rsvp-container" style={{ display: isOpen ? 'none' : 'block' }}>
             
+        <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
             <div className="rsvp-cover">
                 <img src="/assets/rsvp-cover.jpg" alt=""/>
             </div>
@@ -20,7 +24,8 @@ function Rsvp({isOpen, setIsOpen}) {
                 <p>We can't wait to celebrate our special day with you, and your presence means the world to us! Please let us know if you will be able to join in the joy and festivities by <strong>January 1st, 2024</strong>.</p>
             </div>
             
-            <form action="">
+            <div className="form-cover">
+                <form action="" className='rsvp-form'>
                 <fieldset className="fieldset">
                     <legend>
                         <div>Name</div>
@@ -110,8 +115,10 @@ function Rsvp({isOpen, setIsOpen}) {
                     <button>SEND</button>
                 </div>
             </form>
+            </div>
             
         </main>
+        <Footer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   )
 }

@@ -1,13 +1,16 @@
 import { useState } from 'react'
-
+import { Helmet } from 'react-helmet';
 import Header from './Header'
 import { Link } from 'react-router-dom';
-
+import Footer from './Footer'
 
 function HomePage({isOpen, setIsOpen}) {
  
   return (
     <>
+        <Helmet>
+            <title>Home</title>
+        </Helmet>
         <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
         <main style={{ display: isOpen ? 'none' : 'block' }}>
             <div className="img-container">
@@ -104,6 +107,7 @@ function HomePage({isOpen, setIsOpen}) {
                 <img src="assets/countdown-image.png" alt=""/>
             </section>
         </main>
+        <Footer isOpen={isOpen} setIsOpen={setIsOpen}/>
     </>
   )
 }
