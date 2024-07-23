@@ -6,6 +6,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
+}
+
+body{
+  background-color: hsla( 45,50%,95.29% ,1);
 }
 
 @font-face {
@@ -28,6 +33,7 @@ h1 {
   font-family: 'E' !important;
   text-transform: uppercase !important;
   font-size: 107.77px;
+  font-weight: 300  ;
 }
 
 h1 strong {
@@ -67,6 +73,11 @@ h4 {
   font-size: 94px;
   font-family: "Dancing Script", cursive;
   font-optical-sizing: auto;
+  font-weight: 200;
+}
+
+p{
+  font-weight: 300 !important;
 }
 
 .header{
@@ -74,16 +85,13 @@ h4 {
   position: relative;
   z-index: 2;
   box-sizing: border-box;
-  padding-top: 1.4vw;
-  padding-bottom: 1.4vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
+  padding: 30px 70px;
   pointer-events: auto;
   
 }
 
 .header .menu i{
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 30px;
   right:30px;
@@ -165,8 +173,8 @@ ul:hover li a:not(:hover){
   position: relative;
   display: flex;
   width: 100%;
-  height: 110vh;
-  color: hsla( 45,50%,95.29% ,1);
+  height: 100vh;
+  color: hsla( 45,50%,95.29% ,1); 
   align-items: center;
   justify-content: center;
 }
@@ -561,6 +569,8 @@ footer{
   object-fit: cover;
   width: 100%;
   height: 100%;
+  display: block;
+  object-position: 12.549351381838692% 44.002750171885744%;
 }
 
 .our-story-titles{
@@ -706,7 +716,7 @@ footer{
 form{
   position: relative;
   background-color: #EAE1D2D6;
-  width:60%;
+  width:100%;
   height: 965px;
   padding: 60.76px;
   
@@ -715,7 +725,8 @@ form{
 }
 
 .form-cover{
-padding-bottom: 100px;
+  padding-bottom: 100px;
+  width: 55%;
 }
 
 fieldset{
@@ -805,7 +816,7 @@ footer{
 }
 
 .header-media{
-  padding: 50px;
+  padding: 20px;
   /* display: none; */
   position: relative;
   height: 100vh;
@@ -818,7 +829,7 @@ footer{
 .header-media .menu{
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 100px;
   height: 100%;
   width: 100%;
 }
@@ -827,8 +838,6 @@ footer{
   display: flex;
   flex-direction: column;
   text-align: center;
-  
-  gap: 20px;
   list-style: none;
 }
 
@@ -853,7 +862,7 @@ footer{
   padding: .1em 0;
   font-family: 'E';
   cursor: pointer;
-  font-size: 42.5px;
+  font-size: 31.85px;
   color: hsla( 45,50%,95.29% ,1);
   font-style: normal;
   
@@ -889,14 +898,16 @@ footer{
 
 .header-media nav{
   width: 100%;
+  height: 100%;
 }
 .header-media .menu i{
   position: absolute;
-  top: 90px;
-  right: 55px;
+  top: 40px;
+  right: 45px;
   cursor: pointer;
   font-size: 30px;
   color: hsla( 45,50%,95.29% ,1);
+  font-weight: 300;
 }
 
 @media (max-width: 1425px) {
@@ -931,11 +942,9 @@ footer{
 }
 
 @media (max-width: 1025px) {
-  form{
+  .form-cover{
       position: relative;
-      background-color: #EAE1D2D6;
       width:80%;
-      padding: 60.76px;
   }
   
 
@@ -951,7 +960,8 @@ footer{
   }
 
   .travel-section1 div{
-      width:70%;
+      width:100%;
+      padding-top: 5px;
   }
   .travel-section1{
       padding: 100px;
@@ -1017,6 +1027,12 @@ footer{
       font-size: 50px;
       text-align: center;
   }
+  .header{
+    padding-top: 1.4vw;
+    padding-bottom: 1.4vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
 
 }
 
@@ -1024,7 +1040,13 @@ footer{
 
 @media (max-width: 725px) {
 
-
+  .img-container img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: 12.198949934370894% 96.20470029376835%;
+    filter: brightness(0.8);
+  }
   .rsvp-cover{
       width: 100%;
       position: absolute;
@@ -1047,7 +1069,7 @@ footer{
      font-size: 18.29px;
   }
 
-  .rsvp-form{
+  .form-cover{
       width:90%;
       
   }
@@ -1087,13 +1109,13 @@ footer{
   .our-story-image div{
       width: 90%;
       height: 500px;
-      min-width: 380px;
+      min-width: 300px;
   }
   
   .our-story-page , .our-story-image{
       padding: 60px;
+      
   }
-
   .schedule-section, .our-story-section{
       padding: 50px;
   }
@@ -1114,6 +1136,14 @@ footer{
       width: 100%;
   }
 
+  .our-story-titles h2{
+    font-size: 38px;
+  }
+
+  .info-section{
+    flex-direction: column-reverse;
+  }
+
 }
 
 
@@ -1130,6 +1160,10 @@ footer{
     height: 865px;
   }
 
+form{
+  padding: 25px;
+}
+
 form button{
   padding: 15.8px 25.2px;
   font-size: 15.58px ;
@@ -1137,9 +1171,68 @@ form button{
   margin-top: 5px;
 }
 
+.travel-section1 {
+  padding: 10px;
+  margin-bottom: 50px;
+ }
+
+.travel-section1 div h2{
+ font-size: 50px;
 }
+.travel-section1 div h2 strong{
+  font-size: 50px;
+ }
 
-@media (max-width: 450px) {
+ .travel-section1 div h3{
+  font-size: 30px;
+ }
 
+ .travel-section1 div p{
+  font-size: 15px;
+ }
+
+ .travel-section1 div ul{
+  padding-left: 25px;
+ }
+
+ .our-story-container div p{
+  font-size: 16px;
+  font-weight: 100;
+ }
+
+ .our-story-summary h2,.confirm-section h2, .schedule-section h2 ,.info-section h2, .countdown-section-title h2{
+  font-size: 37px;
+ }
+
+ .schedule-section h3{
+  font-size: 22px;
+ }
+
+ .schedule-activities div p{
+  font-size: 16px;
+ }
+
+ .confirm-section h4{
+  margin-top: -20px;
+  font-size: 56px;
+ }
+ .our-story-section, .confirm-section, .schedule-section, .info-section, .countdown-section, form{
+  padding: 25px;
+ }
+ .confirm-section  img{
+  height: 415px;
+ }
+
+ .info-section-tips, .info-section{
+  padding-top: 30px;
+ }
+
+ .info-section h2 strong{
+  font-size: 50px;
+ }
+
+ .countdown-section div span{
+  font-size: 36px;
+ }
 
 }

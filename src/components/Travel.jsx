@@ -47,7 +47,7 @@ function Travel({isOpen, setIsOpen}) {
         <section className="travel-section1">
             
                 <div>
-                    <div>
+                    <div className='travel-title'>
                         <h2>Where to 
                             <strong>Stay</strong>
                         </h2>
