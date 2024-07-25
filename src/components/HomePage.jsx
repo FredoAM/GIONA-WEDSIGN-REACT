@@ -29,13 +29,16 @@ function HomePage({isOpen, setIsOpen}) {
                 </div>
                 <div className="our-story-summary">
                     <h2>Join us as we embark on a journey of love, joy, and eternal happiness.</h2>
+                    <div className="our-story1-media">
+                        <img  src="/assets/our-story-1.jpg" alt="" />
+                    </div>
                     <p>From a chance meeting to a lifetime together, discover the chapters that brought us here. Our journey is a tapestry woven with laughter, tears, and countless moments that led us to this beautiful celebration of love.</p>
                     
                     <Link to="/OurStory"><button>Read Our Story</button></Link>
                 </div>
-                {/* <!-- <div className="our-story2" >
-                    <img src="/assets/our-story-2.jpg" alt="">
-                </div> --> */}
+                <div className="our-story2" >
+                    <img src="/assets/our-story-2.jpg" alt=""/>
+                </div> 
             </section>
 
             <section className="confirm-section">

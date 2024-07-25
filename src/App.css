@@ -217,10 +217,10 @@ button a {
 /* OUR STORY  */
 
 .our-story-section{
-  padding: 126.192px 0px 126.192px 70px;
+  padding: 126.192px 15px 126.192px 70px;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   min-height: 90vh;
   
 }
@@ -232,12 +232,12 @@ button a {
   width: 40%;
 }
 
-.our-story1{
+.our-story1, .our-story1-media{
   max-height: 867px;
   width: 30%;
 }
 
-.our-story1 img{
+.our-story1 img, .our-story1-media img{
   max-height: 867px;
   width: 100%;
 }
@@ -245,11 +245,16 @@ button a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  
   width: 15%;
 }
 
 .our-story2 img{
-  max-height: 379px;
+  width: 100%;
+}
+
+.our-story1-media{
+  display: none;
 }
 
 .our-story-section .our-story-summary button{
@@ -900,7 +905,7 @@ footer{
   width: 100%;
   height: 100%;
 }
-.header-media .menu i{
+.header-media .menu i {
   position: absolute;
   top: 40px;
   right: 45px;
@@ -908,6 +913,13 @@ footer{
   font-size: 30px;
   color: hsla( 45,50%,95.29% ,1);
   font-weight: 300;
+}
+
+
+.header .menu i{
+  position: absolute;
+  top: 35px;
+  right: 35px;
 }
 
 @media (max-width: 1425px) {
@@ -1006,13 +1018,28 @@ footer{
   }
 
   .our-story-section{
-      flex-direction: column-reverse;
       align-items: center;
       gap: 150px;
+      flex-direction: column;
+  }
+
+  .our-story1-media{
+    display: flex;
+  }
+
+  .our-story1{
+    display: none;
   }
 
   .our-story-section div{
       width: 60%;
+  }
+
+  .our-story2 img, .our-story1-media img{
+    height: 100%;
+  }
+  .our-story-summary{
+    width: 100%;
   }
   .titles h1{
       font-size: 50px;
@@ -1020,7 +1047,7 @@ footer{
 
   .titles h4{
       font-size: 40px;
-      margin-top: 20px;
+      margin-top: 5px;
   }
 
   .countdown-section-title h2{
@@ -1081,9 +1108,17 @@ footer{
 
   .header .menu{
       position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
   }
 
- .titles h4, .our-story-page h4{
+  .header .menu img{
+    margin: auto;
+  }
+
+ .our-story-page h4{
       font-size: 40px;
       margin-top: 20px;
   }
